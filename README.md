@@ -1,6 +1,7 @@
 # MS17-010
 
 This repository is for public my work on MS17-010. I have no plan to do any support. **All support issues will not get response from me**.
+Added a modified version of zzz_exploit.py. Usefull if a reverse_shell isnt possible due to firewall or other restriction in your way. The script ```zzz_command.py``` as it is will create a new user in the administrators group. rdp,telnet,ssh or whatever you like can then be your method of entry.
 
 ## Files
 
